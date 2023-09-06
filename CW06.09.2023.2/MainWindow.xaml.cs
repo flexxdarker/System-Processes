@@ -2,12 +2,30 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
-namespace CW06._09._2023
+namespace CW06._09._2023._2
 {
-    internal class Program
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
         static void Task1()
         {
             for (int i = 0; i <= 50; i++)
@@ -23,7 +41,7 @@ namespace CW06._09._2023
             start = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter end number: ");
             end = Convert.ToInt32(Console.ReadLine());
-            if(start >= end)
+            if (start >= end)
             {
                 int a = start;
                 end = start;
@@ -87,22 +105,12 @@ namespace CW06._09._2023
             Thread thread3 = new Thread(Task4Avg);
             thread1.Start();
             thread2.Start();
-            thread3.Start();    
+            thread3.Start();
         }
-        static void Main(string[] args)
+        private void Start_Click(object sender, RoutedEventArgs e)
         {
-            //first task
-            //Thread thread = new Thread(Task1);
-            //thread.Start();
-            //second task
-            //Thread thread = new Thread(Task2);
-            //thread.Start();
-            //third task
-            //Thread thread = new Thread(Task3);
-            //thread.Start();
-            //fourth task
-            //Thread thread = new Thread(Task4);
-            //thread.Start();
+            Thread thread = new Thread(Task3);
+            thread.Start();
         }
     }
 }
