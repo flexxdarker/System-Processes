@@ -7,7 +7,6 @@
             public static int Words = 0;
             public static int Lines = 0;
             public static int Punctuations = 0;
-           
         }
         public static void Counts(object text)
         {
