@@ -1,0 +1,25 @@
+﻿<Window x:Class="CW18._09._2023.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CW18._09._2023"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="number" Grid.Column="0"/>
+            <Button x:Name="Solve" Content="Solve" Margin="2" Click="Solve_Click" Grid.Column="1"/>
+        </Grid>
+        <ListBox x:Name="factorialList">
+            
+        </ListBox>
+    </StackPanel>
+</Window>

@@ -9,7 +9,7 @@
             //Task 2
             //Parallel.Invoke(()=>CountNums(658214782), () => CountSumm(658214782));
             //Task 3
-            Parallel.For(1, 3, MultInFile);
+            //Parallel.For(2, 5, MultInFile);
             //Task 4
             string path = "C:/Users/dev/source/repos/System Processes/Cw15.09.2023/Factorial.txt";
             List<int> numbers = new List<int>();//File.ReadLines(path).;
@@ -39,7 +39,7 @@
             }
             Console.WriteLine($"Factorial of {x} : {result}");
         }
-        public static void MultInFile(int a)
+        public static void MultInFile(int a, int b)
         {
             string path = "C:/Users/dev/source/repos/System Processes/Cw15.09.2023/FileToSave.txt";
             using (StreamWriter sw = new StreamWriter(path))
@@ -53,6 +53,7 @@
                         sw.WriteLine(res);
                     }
                 }
+                
                 sw.Close();
             }
         }
