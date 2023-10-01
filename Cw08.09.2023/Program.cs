@@ -33,7 +33,7 @@
         }
         static void Main(string[] args)
         {
-            string[] files = Directory.GetFiles("C:\\Users\\dev\\source\\repos\\System Processes\\Cw08.09.2023");
+            string[] files = Directory.GetFiles("C:/Users/ksenz/Source/Repos/System-Processes/Cw08.09.2023/Text.txt");
             foreach(string file in files)
             {
                 string text = File.ReadAllText(file);

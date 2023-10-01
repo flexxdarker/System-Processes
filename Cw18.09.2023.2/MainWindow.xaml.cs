@@ -36,7 +36,7 @@ namespace Cw18._09._2023._2
 
         private void from_Click(object sender, RoutedEventArgs e)
         {
-            FileDialog ofd = new OpenFileDialog();
+            OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
             copyFrom.Text = ofd.FileName;
         }
@@ -51,7 +51,7 @@ namespace Cw18._09._2023._2
         {
             return Task.Run(() =>
             {
-                File.Copy(from, to);
+                File.Move(from, to);
             });
         }
     }
